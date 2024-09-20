@@ -1,0 +1,13 @@
+from deep_translator import GoogleTranslator
+
+def translate_text_google(text, src_lang, dest_lang):
+    translated = GoogleTranslator(source=src_lang, target=dest_lang).translate(text)
+    return translated
+
+# Example usage
+text_to_translate = "Hello,My name is Parth Sharma"
+source_language = "en"  # English
+destination_language = "hi"  # Spanish
+
+translated_text = translate_text_google(text_to_translate, source_language, destination_language)
+print(f"Translated Text: {translated_text}")
